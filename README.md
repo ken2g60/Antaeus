@@ -86,4 +86,23 @@ The code given is structured as follows. Feel free however to modify the structu
 * [Sqlite3](https://sqlite.org/index.html) - Database storage engine
 
 Happy hacking 😁!
+
+
+# New Update
+Database schema for the billing. 
+id - autoincrements.
+customerId - forigen key to the customer table.
+referenceId - forigen key to the invoice table.
+status - varchar to store the status of the payment [PENDING,PAID].
+paymentLink - varchar used to the payment link to easy to receive of payment via an email.
+currency - varchar currency being to store the amount of money.
+targetMonth - varchar specific month of bill generated.
+datePaid - varchar of date of received payment.
+
+# BillingService 
+generateMonthlyBills contains the logics for creating the billing for the customer.
+
+Import the Postman collection to test the API endpoints
+/rest/v1/bills
+
 # Pleo
